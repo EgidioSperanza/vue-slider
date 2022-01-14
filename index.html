@@ -23,7 +23,10 @@
                 <i class="fas fa-arrow-circle-right"></i>
               </div>
               <div class="placeholder-slider">
-                  <div v-for="(image, index) in images" :class="['slider-pointer', index===currentIndex ? 'active' : 'disable']" @click="currentIndex=index"></div>
+                  <div v-for="(image, index) in images" :class="[index===currentIndex ? 'active' : 'slider-pointer']" @click="currentIndex=index"></div>
+              </div>
+              <div v-if="mouseOverHere" class="pause">
+                <i class="fas fa-pause-circle"></i>
               </div>
           </div>
       </div>

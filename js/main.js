@@ -16,6 +16,7 @@ new Vue({
         city: "Milano",
       },
     ],
+    mouseOverHere:false,
   },
   methods: {
     autoplaySlide: function () {
@@ -39,9 +40,11 @@ new Vue({
       }
     },
     mouseOver:function(){
+        this.mouseOverHere=true;
         clearInterval(this.timer);
     },
     mouseLeave:function(){
+        this.mouseOverHere=false;
         this.autoplaySlide();
     },
   },
