@@ -14,7 +14,7 @@
   </head>
   <body>
       <div id="app">
-          <div class="img-slide" @mouseover="!mouseOverHere" @mouseleave="mouseOverHere">
+          <div class="img-slide">
               <img :src="images[currentIndex].img" alt="">
               <div @click="prewImage" class="prew">
                 <i class="fas fa-arrow-circle-left"></i>
@@ -22,8 +22,8 @@
               <div @click="nextImage" class="next">
                 <i class="fas fa-arrow-circle-right"></i>
               </div>
-              <div v-for="image in images">
-                  <p class="placeholder-slider"></p>
+              <div class="placeholder-slider">
+                  <div v-for="(image, index) in images" :class="['slider-pointer', index===currentIndex ? 'active' : 'disable']"></div>
               </div>
           </div>
       </div>

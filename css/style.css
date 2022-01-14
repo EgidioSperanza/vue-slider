@@ -40,11 +40,19 @@
 .placeholder-slider {
   position: absolute;
   bottom: 1vw;
-  left: calc(50% - 1vw);
-  background-color: #fff;
-  border-radius: 100%;
-  width: 1vw;
-  height: 1vw;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+.slider-pointer{
+    background-color: #333;
+    border-radius: 100%;
+    width: 2vw;
+    height: 2vw;
+  display: inline-block;
+  margin: 5px;
+}
+.active{
+    background-color: #fff;
 }
 @media only screen and (max-width: 575px) {
   .img-slide {
@@ -55,10 +63,5 @@
   .prew,
   .next {
     width: 10vw;
-  }
-  .placeholder-slider {
-    left: calc(50% - 1.5vw);
-    width: 3vw;
-    height: 3vw;
   }
 }
