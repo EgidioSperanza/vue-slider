@@ -14,8 +14,8 @@
   </head>
   <body>
       <div id="app">
-          <div class="img-slide">
-              <img :src="images[currentIndex].img" alt="">
+          <div class="img-slide" @mouseover="mouseOver" @mouseleave="mouseLeave">
+              <img :src="images[currentIndex].img" :alt="images[currentIndex].city">
               <div @click="prewImage" class="prew">
                 <i class="fas fa-arrow-circle-left"></i>
               </div>

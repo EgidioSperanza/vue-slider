@@ -16,14 +16,13 @@ new Vue({
         city: "Milano",
       },
     ],
-    mouseOverHere: false,
   },
   methods: {
     autoplaySlide: function () {
-      let time = this;
-      this.timer = setInterval(function () {
-        time.nextImage();
-      }, 5000);
+            let time = this;
+            this.timer = setInterval(function () {
+              time.nextImage();
+            }, 3000);
     },
     nextImage: function () {
       this.currentIndex++;
@@ -38,6 +37,12 @@ new Vue({
       if (this.currentIndex < 0) {
         this.currentIndex = this.images.length - 1;
       }
+    },
+    mouseOver:function(){
+        clearInterval(this.timer);
+    },
+    mouseLeave:function(){
+        this.autoplaySlide();
     },
   },
   mounted: function () {
