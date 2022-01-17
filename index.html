@@ -28,6 +28,9 @@
               <div v-if="mouseOverHere" class="pause">
                 <i class="fas fa-pause-circle"></i>
               </div>
+              <div v-else class="pause">
+                  {{images[currentIndex].city}}
+              </div>
           </div>
       </div>
     <script src="./js/main.js"></script>

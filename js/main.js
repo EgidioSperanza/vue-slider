@@ -16,13 +16,13 @@ new Vue({
         city: "Milano",
       },
     ],
+    timer:null,
     mouseOverHere:false,
   },
   methods: {
     autoplaySlide: function () {
-            let time = this;
-            this.timer = setInterval(function () {
-              time.nextImage();
+            this.timer = setInterval( () => {
+              this.nextImage();
             }, 3000);
     },
     nextImage: function () {
